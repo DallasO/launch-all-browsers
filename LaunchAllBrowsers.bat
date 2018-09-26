@@ -10,6 +10,9 @@
     IF EXIST "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" (
       start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "%url%"
     )
+    IF EXIST "C:\Program Files (x86)\Google\Chrome Beta\Application\chrome.exe" (
+      start "" "C:\Program Files (x86)\Google\Chrome Beta\Application\chrome.exe" "%url%"
+    )
     IF EXIST "C:\Program Files\Mozilla Firefox\firefox.exe" (
       start "" "C:\Program Files\Mozilla Firefox\firefox.exe" "%url%"
     )
