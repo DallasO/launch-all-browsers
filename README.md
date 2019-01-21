@@ -5,8 +5,8 @@ This is a script to run on Windows 10 that allows you to open a link on all inst
 1. Chrome
 2. Chrome Beta
 3. Firefox
-4. Edge
-5. Internet Explorer
+4. Internet Explorer
+5. Edge
 
 ## How to use
 Save the .bat file and double-click to run  

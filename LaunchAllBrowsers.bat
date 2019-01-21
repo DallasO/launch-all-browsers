@@ -16,7 +16,9 @@
     IF EXIST "C:\Program Files\Mozilla Firefox\firefox.exe" (
       start "" "C:\Program Files\Mozilla Firefox\firefox.exe" "%url%"
     )
-    start "" "C:\Program Files\internet explorer\iexplore.exe" "%url%"
+    IF EXIST "C:\Program Files\internet explorer\iexplore.exe" (
+      start "" "C:\Program Files\internet explorer\iexplore.exe" "%url%"
+    )
     start "" microsoft-edge:"%url%"
 
     echo.
