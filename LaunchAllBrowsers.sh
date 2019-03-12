@@ -4,6 +4,11 @@
 #
 #
 # Open a link in all of your installed browsers
+
+# ****************************************************************************************************
+# $ launch-all-browsers [URL]
+#
+# ****************************************************************************************************
 #
 # 1. Make sure this script is executable
 #     $ chmod u+x LaunchAllBrowsers.sh

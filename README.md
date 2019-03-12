@@ -36,7 +36,7 @@ Tested on Debian
 
      Either by editing your ~/.profile or ~/.bashrc file:  
 
-    `export PATH="$PATH:/path/to/launch-all-browsers"``
+    `export PATH="$PATH:/path/to/launch-all-browsers"`
 
     OR
 
