@@ -43,4 +43,6 @@ if [ "$1" != "" ]; then
         nohup $cmdFirefox "$1" >/dev/null 2>&1 &
     fi
 
+else
+  exit 1
 fi
