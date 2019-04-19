@@ -22,7 +22,7 @@
 #
 #     Adding a symlink:
 #
-#     $ cd /usr/bin
+#     $ cd /usr/local/bin
 #     $ sudo ln -s /path/to/launch-all-browsers/LaunchAllBrowsers.sh launch-all-browsers
 #
 # ****************************************************************************************************
