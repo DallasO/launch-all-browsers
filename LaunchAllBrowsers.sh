@@ -26,23 +26,37 @@
 #     $ sudo ln -s /path/to/launch-all-browsers/LaunchAllBrowsers.sh launch-all-browsers
 #
 # ****************************************************************************************************
-
+set -u
 
 # Make sure URL was passed
 if [ "$1" != "" ]; then
 
+  # Detect OS
+  uname=$(uname);
+  case "$uname" in
+      (*Linux*) openCmd='xdg-open'; ;;
+      (*Darwin*) openCmd='open'; ;;
+      (*CYGWIN*) openCmd='cygstart'; ;;
+      (*) echo 'error: unsupported platform.'; exit 2; ;;
+  esac;
+
+  if uname | grep Linux > /dev/null 2>&1; then
     cmdChromium=$( type -p chromium 2>&1 )
 
     if [ "$cmdChromium" != "" ]; then
-        nohup $cmdChromium "$1" >/dev/null 2>&1 &
+        nohup $cmdChromium "$1" > /dev/null 2>&1 &
     fi
 
     cmdFirefox=$( type -p firefox 2>&1 )
 
     if [ "$cmdFirefox" != "" ]; then
-        nohup $cmdFirefox "$1" >/dev/null 2>&1 &
+        nohup $cmdFirefox "$1" > /dev/null 2>&1 &
     fi
+  else
+    "$openCmd" "$filename.pdf";
+  fi
 
 else
+  echo "URL missing?"
   exit 1
 fi
